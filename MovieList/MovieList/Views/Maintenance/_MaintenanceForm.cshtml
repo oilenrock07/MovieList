@@ -1,0 +1,23 @@
+﻿@model MovieList.Models.Maintenance.MaintenanceViewModel
+
+
+<div class="form-horizontal">
+    <div class="col-md-6">
+        <div class="form-group">
+            @Html.LabelFor(model => model.Movie.Title, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-6">
+                @Html.TextBoxFor(model => model.Movie.Title, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.Movie.Title)
+            </div>
+        </div>
+        
+        <div class="form-group">
+            @Html.LabelFor(model => model.Movie.Year, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-6">
+                @Html.TextBoxFor(model => model.Movie.Year, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.Movie.Year)
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6"></div>
+</div>
