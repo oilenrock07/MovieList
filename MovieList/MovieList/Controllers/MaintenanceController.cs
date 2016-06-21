@@ -18,7 +18,7 @@ namespace MovieList.Controllers
         [HttpPost]
         public JsonResult GetHtmlString(string imdbId)
         {
-            var downloadedString = "";
+            var downloadedString = "";//System.IO.File.ReadAllText(@"C:\Cawi\response.html");
             var url = String.Format("http://www.imdb.com/title/{0}", imdbId);
 
             using (var client = new WebClient())

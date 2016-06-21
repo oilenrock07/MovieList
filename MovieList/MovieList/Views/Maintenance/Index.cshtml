@@ -5,17 +5,32 @@
 
 <h2>Maintenance</h2>
 
-<div class="form-horizontal">
-    <div class="col-xs-12">
-        <div class="input-group">
-            <input type="text" class="form-control" placeholder="Search Imdb Id or Movie Title">
-            <div class="input-group-btn">
-                <input type="button" class="btn btn-primary" value="Search" />
+<div class="row">
+    <div class="row form-horizontal b2">
+        <div class="col-md-5">
+            <div class="input-group">
+                <input type="text" class="form-control" placeholder="Search Imdb Id or Movie Title" id="Search">
+                <div class="input-group-btn">
+                    <input type="button" class="btn btn-info" value="Search" />
+                </div>
+            </div>
+        </div>
+        <div class="col-md-7">
+            <div class="pull-right">
+                <input type="button" value="Get Updated IMDB Details" class="btn btn-warning js-getImdbDetails" />
+                <input type="button" value="Save" class="btn btn-primary" />
             </div>
         </div>
     </div>
+
+
+    <div class="row">
+        @Html.Partial("_MaintenanceForm", Model)
+    </div>
+
 </div>
 
-
-
-@Html.Partial("_MaintenanceForm", Model)
+@section scripts
+{
+    <script type="text/javascript" src="/Scripts/app.js"></script>
+}

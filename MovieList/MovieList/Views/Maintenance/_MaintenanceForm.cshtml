@@ -3,21 +3,182 @@
 
 <div class="form-horizontal">
     <div class="col-md-6">
+        
+        @Html.HiddenFor(model => model.Movie.MovieId)
+
         <div class="form-group">
             @Html.LabelFor(model => model.Movie.Title, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-6">
-                @Html.TextBoxFor(model => model.Movie.Title, new { @class = "form-control" })
+                @Html.TextBoxFor(model => model.Movie.Title, new { @class = "form-control js-title" })
                 @Html.ValidationMessageFor(model => model.Movie.Title)
+            </div>
+        </div>
+        
+        <div class="form-group">
+            @Html.LabelFor(model => model.Movie.ImdbId, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-6">
+                @Html.TextBoxFor(model => model.Movie.ImdbId, new { @class = "form-control js-imdbId" })
+                @Html.ValidationMessageFor(model => model.Movie.ImdbId)
             </div>
         </div>
         
         <div class="form-group">
             @Html.LabelFor(model => model.Movie.Year, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-6">
-                @Html.TextBoxFor(model => model.Movie.Year, new { @class = "form-control" })
+                @Html.TextBoxFor(model => model.Movie.Year, new { @class = "form-control js-year" })
                 @Html.ValidationMessageFor(model => model.Movie.Year)
             </div>
         </div>
+        
+        <div class="form-group">
+            @Html.LabelFor(model => model.Movie.Rate, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-6">
+                @Html.TextBoxFor(model => model.Movie.Rate, new { @class = "form-control js-rate" })
+                @Html.ValidationMessageFor(model => model.Movie.Rate)
+            </div>
+        </div>
+        
+        <div class="form-group">
+            @Html.LabelFor(model => model.Movie.Rating, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-6">
+                @Html.TextBoxFor(model => model.Movie.Rating, new { @class = "form-control js-rating" })
+                @Html.ValidationMessageFor(model => model.Movie.Rating)
+            </div>
+        </div>
+        
+        <div class="form-group">
+            @Html.LabelFor(model => model.GenreRaw, "Genre",htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-6">
+                @Html.TextBoxFor(model => model.GenreRaw, new { @class = "form-control js-genre" })
+                @Html.ValidationMessageFor(model => model.GenreRaw)
+            </div>
+        </div>
+        
+        <div class="form-group">
+            @Html.LabelFor(model => model.StarsRaw, "Stars", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-6">
+                @Html.TextBoxFor(model => model.StarsRaw, new { @class = "form-control js-stars" })
+                @Html.ValidationMessageFor(model => model.StarsRaw)
+            </div>
+        </div>
+        
+        <div class="form-group">
+            @Html.LabelFor(model => model.WriterRaw, "Writers", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-6">
+                @Html.TextBoxFor(model => model.WriterRaw, new { @class = "form-control js-writers" })
+                @Html.ValidationMessageFor(model => model.WriterRaw)
+            </div>
+        </div>
+        
+        <div class="form-group">
+            @Html.LabelFor(model => model.Movie.Runtime, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-6">
+                @Html.TextBoxFor(model => model.Movie.Runtime, new { @class = "form-control js-runtime" })
+                @Html.ValidationMessageFor(model => model.Movie.Runtime)
+            </div>
+        </div>
+        
+        <div class="form-group">
+            @Html.LabelFor(model => model.Movie.Country, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-6">
+                @Html.TextBoxFor(model => model.Movie.Country, new { @class = "form-control js-country" })
+                @Html.ValidationMessageFor(model => model.Movie.Country)
+            </div>
+        </div>
+        
+        <div class="form-group">
+            @Html.LabelFor(model => model.Movie.Language, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-6">
+                @Html.TextBoxFor(model => model.Movie.Language, new { @class = "form-control js-language" })
+                @Html.ValidationMessageFor(model => model.Movie.Language)
+            </div>
+        </div>
+        
+        <div class="form-group">
+            @Html.LabelFor(model => model.Movie.ReleasedDate, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-6">
+                @Html.TextBoxFor(model => model.Movie.ReleasedDate, new { @class = "form-control js-releasedDate" })
+                @Html.ValidationMessageFor(model => model.Movie.ReleasedDate)
+            </div>
+        </div>
     </div>
-    <div class="col-md-6"></div>
+    
+    
+
+    <div class="col-md-6">
+        
+        <div class="form-group">
+            @Html.LabelFor(model => model.Movie.Poster, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-6">
+                @Html.TextBoxFor(model => model.Movie.Poster, new { @class = "form-control js-poster" })
+                @Html.ValidationMessageFor(model => model.Movie.Poster)
+            </div>
+        </div>
+
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Movie.Photos, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-6">
+                @Html.TextBoxFor(model => model.Movie.Photos, new { @class = "form-control js-photos" })
+                @Html.ValidationMessageFor(model => model.Movie.Photos)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Movie.MetaScore, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-6">
+                @Html.TextBoxFor(model => model.Movie.MetaScore, new { @class = "form-control js-metaScore" })
+                @Html.ValidationMessageFor(model => model.Movie.MetaScore)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Movie.ReviewLink, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-6">
+                @Html.TextBoxFor(model => model.Movie.ReviewLink, new { @class = "form-control js-reviewLink" })
+                @Html.ValidationMessageFor(model => model.Movie.ReviewLink)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Movie.AwardsLink, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-6">
+                @Html.TextBoxFor(model => model.Movie.AwardsLink, new { @class = "form-control js-awards" })
+                @Html.ValidationMessageFor(model => model.Movie.AwardsLink)
+            </div>
+        </div>
+        
+        <div class="form-group">
+            @Html.LabelFor(model => model.Movie.Budget, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-6">
+                @Html.TextBoxFor(model => model.Movie.Budget, new { @class = "form-control js-budget" })
+                @Html.ValidationMessageFor(model => model.Movie.Budget)
+            </div>
+        </div>
+        
+        <div class="form-group">
+            @Html.LabelFor(model => model.Movie.Gross, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-6">
+                @Html.TextBoxFor(model => model.Movie.Gross, new { @class = "form-control js-gross" })
+                @Html.ValidationMessageFor(model => model.Movie.Gross)
+            </div>
+        </div>
+        
+        <div class="form-group">
+            @Html.LabelFor(model => model.Movie.Summary, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextAreaFor(model => model.Movie.Summary, new { @class = "form-control js-summary", rows=5 })
+                @Html.ValidationMessageFor(model => model.Movie.Summary)
+            </div>
+        </div>
+        
+        <div class="form-group">
+            @Html.LabelFor(model => model.Movie.StoryLine, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextAreaFor(model => model.Movie.StoryLine, new { @class = "form-control js-storyline", rows=5 })
+                @Html.ValidationMessageFor(model => model.Movie.StoryLine)
+            </div>
+        </div>
+
+    </div>
 </div>

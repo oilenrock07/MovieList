@@ -16,6 +16,7 @@ namespace MovieList.Entities.Contexts
         public virtual IDbSet<Genre> Genres  { get; set; }
         public virtual IDbSet<Person> Persons  { get; set; }
         public virtual IDbSet<RelatedMovie> RelatedMovies  { get; set; }
+        public virtual IDbSet<StarRole> StarRoles { get; set; }
 
         public static string ConnectionString
         {
